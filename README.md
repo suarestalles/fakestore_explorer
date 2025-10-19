@@ -89,8 +89,8 @@ Certifique-se de ter instalado em sua máquina:
 ### Instalação pelo APK
 
 
-Vou deixar o link do .apk aqui caso prefira instalar em seu dispositivo Android!
-[APK: ](https://1drv.ms/u/c/d81422e88fb205a8/EekTfUgv0CdFpq2vVwLY4xUBFV3yQetsWQyzwEoxjpOyhQ?e=mcP7fZ)
+Vou deixar o link do .apk aqui caso prefira instalar em seu dispositivo Android:
+* [APK](https://1drv.ms/u/c/d81422e88fb205a8/EekTfUgv0CdFpq2vVwLY4xUBFV3yQetsWQyzwEoxjpOyhQ?e=mcP7fZ)
 
 
 ## 🔐 Instruções de Login
