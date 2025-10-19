@@ -12,8 +12,8 @@ class LoginPageController extends GetxController {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  final userController = TextEditingController(text: 'user_test@franqstore.com');
-  final passwordController = TextEditingController(text: 'usertestfranqstore');
+  final userController = TextEditingController();
+  final passwordController = TextEditingController();
 
   get isAuthenticated => _auth.currentUser == null;
   get userEmail => _auth.currentUser?.email;
@@ -26,6 +26,7 @@ class LoginPageController extends GetxController {
 
     // Caso o formulário não seja válido, retorna sem fazer nada
     if (formKey.currentState == null || !formKey.currentState!.validate()) {
+      isLogin?.value = false;
       return;
     }
     try {

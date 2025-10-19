@@ -31,13 +31,13 @@ dev_dependencies:
   build_runner: ^2.6.0
   json_serializable: ^6.10.0
   objectbox_generator: any
+  flutter_launcher_icons: "^0.14.4"
 
 flutter:
   uses-material-design: true
 
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/icons/
   # fonts:
   #   - family: Schyler
   #     fonts:
@@ -49,3 +49,11 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+
+flutter_launcher_icons:
+  android: "launcher_icon" # Define o nome do ícone (opcional)
+  ios: true                 # Para gerar ícones para iOS
+  image_path: "assets/icons/shopping-icon.png" # Crie este arquivo em seu projeto!
+  # Se quiser um ícone adaptativo para Android (mais avançado):
+  # adaptive_icon_foreground: "assets/icon/meu_icone_foreground.png"
+  # adaptive_icon_background: "#FFFFFF" # ou caminho para imagem
