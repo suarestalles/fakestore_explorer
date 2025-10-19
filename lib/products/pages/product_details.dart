@@ -1,15 +1,16 @@
 import 'package:brasil_fields/brasil_fields.dart';
+import 'package:fakestore_explorer/widgets/my_toggle_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:franq_store/main.dart';
-import 'package:franq_store/objectbox.g.dart';
-import 'package:franq_store/products/controllers/favorite_products_controller.dart';
-import 'package:franq_store/products/controllers/product_list_controller.dart';
-import 'package:franq_store/products/models/product_model.dart';
-import 'package:franq_store/products/pages/favorite_products_list.dart';
-import 'package:franq_store/utils/constants.dart';
-import 'package:franq_store/utils/my_snackbars.dart';
-import 'package:franq_store/widgets/my_drawer.dart';
-import 'package:franq_store/widgets/stars_rating.dart';
+import 'package:fakestore_explorer/main.dart';
+import 'package:fakestore_explorer/objectbox.g.dart';
+import 'package:fakestore_explorer/products/controllers/favorite_products_controller.dart';
+import 'package:fakestore_explorer/products/controllers/product_list_controller.dart';
+import 'package:fakestore_explorer/products/models/product_model.dart';
+import 'package:fakestore_explorer/products/pages/favorite_products_list.dart';
+import 'package:fakestore_explorer/utils/constants.dart';
+import 'package:fakestore_explorer/utils/my_snackbars.dart';
+import 'package:fakestore_explorer/widgets/my_drawer.dart';
+import 'package:fakestore_explorer/widgets/stars_rating.dart';
 import 'package:get/get.dart';
 
 class ProductDetails extends StatefulWidget {
@@ -54,6 +55,8 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ],
           ),
+          SizedBox(width: defaultPadding),
+          MyToggleTheme(),
         ],
         actionsPadding: EdgeInsets.all(defaultPadding),
       ),

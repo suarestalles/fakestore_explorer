@@ -1,8 +1,10 @@
+import 'package:fakestore_explorer/utils/my_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:franq_store/login/controllers/login_page_controller.dart';
-import 'package:franq_store/utils/constants.dart';
-import 'package:franq_store/widgets/my_text_form_field.dart';
+import 'package:fakestore_explorer/login/controllers/login_page_controller.dart';
+import 'package:fakestore_explorer/utils/constants.dart';
+import 'package:fakestore_explorer/widgets/my_text_form_field.dart';
 import 'package:get/get.dart';
+import 'package:validatorless/validatorless.dart';
 
 class LoginPage extends StatefulWidget {
 
@@ -28,7 +30,6 @@ class _LoginPageState extends State<LoginPage> {
               color: Colors.white54,
               image: DecorationImage(
                 image: NetworkImage('https://franq.com.br/wp-content/uploads/2023/03/cropped-Prancheta-1@3x-2.png'),
-                // alignment: AlignmentGeometry.topCenter,
                 fit: BoxFit.fill
               ),
             ),
@@ -45,6 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                     () => null,
                     'Email',
                     Icons.person,
+                    validators: [Validatorless.required('Email is required')],
                   ),
                   MyTextFormField(
                     controller.passwordController,
@@ -52,22 +54,28 @@ class _LoginPageState extends State<LoginPage> {
                     'Password',
                     Icons.person,
                     obscureText: true,
+                    validators: [Validatorless.required('Password is required')],
                   ),
-                  InkWell(
-                    onTap: () async => await controller.login(),
-                    child: Container(
-                      padding: EdgeInsets.all(defaultPadding * 2),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: defaultPadding,
-                        children: [
-                          Icon(Icons.input_sharp),
-                          Text('Login')
-                        ],
-                      ),
+                  Obx(
+                    () => InkWell(
+                      onTap: () async => await controller.login(),
+                      child: controller.isLogin?.value == true
+                        ? CircularProgressIndicator()
+                        : Container(
+                            padding: EdgeInsets.all(defaultPadding * 2),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: loginButtonColor
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              spacing: defaultPadding,
+                              children: [
+                                Icon(Icons.input_sharp),
+                                Text('Login')
+                              ],
+                            ),
+                          ),
                     ),
                   ),
                   Expanded(child: Container()),

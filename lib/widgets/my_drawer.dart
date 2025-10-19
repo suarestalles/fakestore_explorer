@@ -1,8 +1,9 @@
+import 'package:fakestore_explorer/login/controllers/auth_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:franq_store/login/controllers/login_page_controller.dart';
-import 'package:franq_store/products/pages/favorite_products_list.dart';
-import 'package:franq_store/products/pages/product_list.dart';
-import 'package:franq_store/utils/constants.dart';
+import 'package:fakestore_explorer/login/controllers/login_page_controller.dart';
+import 'package:fakestore_explorer/products/pages/favorite_products_list.dart';
+import 'package:fakestore_explorer/products/pages/product_list.dart';
+import 'package:fakestore_explorer/utils/constants.dart';
 import 'package:get/get.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -20,7 +21,8 @@ class MyDrawer extends StatelessWidget {
               image: DecorationImage(image: NetworkImage('https://img.odcdn.com.br/wp-content/uploads/2021/05/Franq-Openbank.png'))
             ),
             child: Text(
-              Get.find<LoginPageController>().userEmail,
+              // Obtém o email do usuário autenticado
+              AuthController().firebaseUser.value?.email ?? 'User Email',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
@@ -37,10 +39,11 @@ class MyDrawer extends StatelessWidget {
               ], 
             ),
             onTap: () {
+              // Fechar o Drawer
               Navigator.pop(context);
               if (Get.currentRoute == ProductList.routeName) {
-                // print('Já estamos na tela de listagem. Não há navegação.');
-                return; // Apenas fecha o Drawer e não faz nada mais.
+                // Apenas fecha o Drawer e não faz nada mais.
+                return;
               }
               Get.off(() => ProductList());
             },
@@ -54,15 +57,15 @@ class MyDrawer extends StatelessWidget {
               ],
             ),
             onTap: () {
+              // Fechar o Drawer
               Navigator.pop(context);
               if (Get.currentRoute == FavoriteProductsList.routeName) {
-                // print('Já estamos na tela de listagem. Não há navegação.');
-                return; // Apenas fecha o Drawer e não faz nada mais.
+                // Apenas fecha o Drawer e não faz nada mais.
+                return;
               }
               Get.to(() => FavoriteProductsList());
             },
           ),
-          // Expanded(child: Container()),
           Divider(),
           ListTile(
             title: Row(
@@ -75,8 +78,7 @@ class MyDrawer extends StatelessWidget {
             onTap: () async {
               // Fechar o Drawer
               Navigator.pop(context);
-              // Aqui você pode adicionar a lógica de logout, por exemplo
-              // Get.offAll(() => LoginPage());
+              // Realiza o logout
               await Get.find<LoginPageController>().logout();
             },
           ),

@@ -1,9 +1,10 @@
+import 'package:fakestore_explorer/widgets/my_toggle_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:franq_store/products/controllers/favorite_products_controller.dart';
-import 'package:franq_store/products/widgets/product_list_card.dart';
-import 'package:franq_store/utils/constants.dart';
-import 'package:franq_store/widgets/my_drawer.dart';
-import 'package:franq_store/widgets/my_text_form_field.dart';
+import 'package:fakestore_explorer/products/controllers/favorite_products_controller.dart';
+import 'package:fakestore_explorer/products/widgets/product_list_card.dart';
+import 'package:fakestore_explorer/utils/constants.dart';
+import 'package:fakestore_explorer/widgets/my_drawer.dart';
+import 'package:fakestore_explorer/widgets/my_text_form_field.dart';
 import 'package:get/get.dart';
 
 class FavoriteProductsList extends StatefulWidget {
@@ -26,6 +27,7 @@ class _FavoriteProductsListState extends State<FavoriteProductsList> {
       child: Scaffold(
         appBar: AppBar(
           actionsPadding: EdgeInsets.all(defaultPadding),
+          actions: [MyToggleTheme()],
         ),
         drawer: MyDrawer(),
         body: GetBuilder(

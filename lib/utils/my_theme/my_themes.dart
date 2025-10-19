@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:franq_store/utils/my_colors.dart';
+import 'package:fakestore_explorer/utils/my_colors.dart';
 
 // Tema Claro (Light Theme)
 final ThemeData lightTheme = ThemeData(

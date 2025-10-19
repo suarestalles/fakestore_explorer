@@ -1,4 +1,4 @@
-# franq_store
+# fakestore_explorer
 
 A new Flutter project.
 

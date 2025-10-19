@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+// Utilitário para exibir Snackbars personalizadas
 class MySnackbars {
 
+  // Snackbar de sucesso
   static SnackbarController successSnackBar(String message) {
     return Get.snackbar(
       'Success',
@@ -13,6 +15,7 @@ class MySnackbars {
     );
   }
 
+  // Snackbar de erro
   static SnackbarController errorSnackBar(String message) {
     return Get.snackbar(
       'Error',
@@ -23,6 +26,7 @@ class MySnackbars {
     );
   }
 
+  // Snackbar de aviso
   static SnackbarController warningSnackBar(String message) {
     return Get.snackbar(
       'Warning',

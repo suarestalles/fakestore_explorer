@@ -1,13 +1,13 @@
 import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:franq_store/main.dart';
-import 'package:franq_store/objectbox.g.dart';
-import 'package:franq_store/products/controllers/favorite_products_controller.dart';
-import 'package:franq_store/products/controllers/product_list_controller.dart';
-import 'package:franq_store/products/models/product_model.dart';
-import 'package:franq_store/products/pages/product_details.dart';
-import 'package:franq_store/utils/constants.dart';
-import 'package:franq_store/utils/my_snackbars.dart';
+import 'package:fakestore_explorer/main.dart';
+import 'package:fakestore_explorer/objectbox.g.dart';
+import 'package:fakestore_explorer/products/controllers/favorite_products_controller.dart';
+import 'package:fakestore_explorer/products/controllers/product_list_controller.dart';
+import 'package:fakestore_explorer/products/models/product_model.dart';
+import 'package:fakestore_explorer/products/pages/product_details.dart';
+import 'package:fakestore_explorer/utils/constants.dart';
+import 'package:fakestore_explorer/utils/my_snackbars.dart';
 import 'package:get/get.dart';
 
 class ProductListCard extends StatefulWidget {
@@ -46,7 +46,6 @@ class _ProductListCardState extends State<ProductListCard> {
                   children: [
                     Text(
                       widget.product?.title ?? '-',
-                      // overflow: TextOverflow.,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,

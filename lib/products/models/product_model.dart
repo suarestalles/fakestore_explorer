@@ -1,9 +1,10 @@
-import 'package:franq_store/ratings/models/rating_model.dart';
+import 'package:fakestore_explorer/ratings/models/rating_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:objectbox/objectbox.dart';
 
 part 'product_model.g.dart';
 
+// Definição da classe Product com anotações para serialização JSON e mapeamento ObjectBox
 @JsonSerializable(explicitToJson: true)
 @Entity()
 class Product {
@@ -19,6 +20,7 @@ class Product {
   @Transient()
   Rating? rating;
 
+  // Construtor da classe Product
   Product({
     this.id,
     this.externalId,
@@ -29,6 +31,7 @@ class Product {
     this.image,
   });
 
+  // Métodos para serialização e desserialização JSON
   factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProductToJson(this);

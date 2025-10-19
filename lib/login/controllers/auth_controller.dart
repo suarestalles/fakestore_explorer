@@ -16,7 +16,7 @@ class AuthController extends GetxController {
     // Toda vez que o estado de autenticação mudar, o 'firebaseUser' será atualizado.
     firebaseUser.bindStream(_auth.authStateChanges());
     
-    // Opcional: Adicionar lógica de redirecionamento (útil para Single-Page App)
+    // Lógica de redirecionamento
     ever(firebaseUser, _initialScreenRedirect);
   }
 
@@ -31,6 +31,4 @@ class AuthController extends GetxController {
       Get.offAllNamed('/products');
     }
   }
-
-  // ... (Seu signIn, signUp, signOut functions aqui) ...
 }

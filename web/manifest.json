@@ -1,6 +1,6 @@
 {
-    "name": "franq_store",
-    "short_name": "franq_store",
+    "name": "fakestore_explorer",
+    "short_name": "fakestore_explorer",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

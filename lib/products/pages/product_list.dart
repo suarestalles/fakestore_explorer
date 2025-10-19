@@ -1,14 +1,14 @@
+import 'package:fakestore_explorer/widgets/my_toggle_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:franq_store/main.dart';
-import 'package:franq_store/products/controllers/favorite_products_controller.dart';
-import 'package:franq_store/products/controllers/product_list_controller.dart';
-import 'package:franq_store/products/models/product_model.dart';
-import 'package:franq_store/products/pages/favorite_products_list.dart';
-import 'package:franq_store/products/widgets/product_list_card.dart';
-import 'package:franq_store/utils/constants.dart';
-import 'package:franq_store/utils/my_theme/controllers/my_theme_controller.dart';
-import 'package:franq_store/widgets/my_drawer.dart';
-import 'package:franq_store/widgets/my_text_form_field.dart';
+import 'package:fakestore_explorer/main.dart';
+import 'package:fakestore_explorer/products/controllers/favorite_products_controller.dart';
+import 'package:fakestore_explorer/products/controllers/product_list_controller.dart';
+import 'package:fakestore_explorer/products/models/product_model.dart';
+import 'package:fakestore_explorer/products/pages/favorite_products_list.dart';
+import 'package:fakestore_explorer/products/widgets/product_list_card.dart';
+import 'package:fakestore_explorer/utils/constants.dart';
+import 'package:fakestore_explorer/widgets/my_drawer.dart';
+import 'package:fakestore_explorer/widgets/my_text_form_field.dart';
 import 'package:get/get.dart';
 
 class ProductList extends StatefulWidget {
@@ -27,8 +27,6 @@ class _ProductListState extends State<ProductList> {
   Widget build(BuildContext context) {
     Get.lazyPut(() => ProductListController());
     Get.lazyPut(() => FavoriteProductsListController());
-    Get.lazyPut(() => MyThemeController());
-    final MyThemeController themeController = Get.find();
     return Material(
       color: Colors.white,
       child: GetBuilder(
@@ -63,17 +61,7 @@ class _ProductListState extends State<ProductList> {
                   ],
                 ),
                 SizedBox(width: defaultPadding),
-                Icon(
-                  Icons.sunny,
-                  color: Colors.amber
-                ),
-                Obx(
-                  () => Switch(value: themeController.isDarkMode.value, onChanged: themeController.toggleTheme),
-                ),
-                Icon(
-                  Icons.nightlight_round_sharp,
-                  color: Colors.white,
-                ),
+                MyToggleTheme(),
               ],
               actionsPadding: EdgeInsets.all(defaultPadding),
             ),
