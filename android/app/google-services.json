@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "65569720205",
+    "project_id": "franq-store-4d5d5",
+    "storage_bucket": "franq-store-4d5d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65569720205:android:a501846ba0aedafac09fc4",
+        "android_client_info": {
+          "package_name": "com.example.franq_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp-4dawtIaO-CXsmGzCCMAgbUKcBTB3ko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

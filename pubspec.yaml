@@ -1,0 +1,49 @@
+name: franq_store
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  json_annotation: ^4.9.0
+  get: ^4.7.2
+  http: ^1.5.0
+  brasil_fields: ^1.18.0
+  objectbox: ^5.0.0
+  objectbox_flutter_libs: any
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  firebase_core: ^4.2.0
+  firebase_auth: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.6.0
+  json_serializable: ^6.10.0
+  objectbox_generator: any
+
+flutter:
+  uses-material-design: true
+
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
